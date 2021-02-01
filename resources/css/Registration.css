@@ -1,0 +1,44 @@
+body {
+    background-color: #000021;
+    background: #1c324e;
+}
+
+
+.Registration_form{
+    position: absolute;
+    background-color: #e8e8e8;
+    margin: auto;
+    top: 2%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 85%;
+    width: 400px;
+    padding: 20px;
+}
+
+.content{
+	    display: block; 
+        margin-left: 4%; 
+        margin-right: auto;
+}
+
+lable{
+    margin-top: 20px;
+    margin-left: 10%;
+    color: #435068;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 75px;
+}
+
+button{
+    margin-top: 15%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+.reg{
+	position: relative;
+	top: 20px;
+}
