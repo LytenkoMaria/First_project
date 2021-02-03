@@ -1,0 +1,142 @@
+body {
+    background-color: #000021;
+    background: #1c324e;
+}
+
+
+.sign-in-form{
+	position: absolute;
+	background-color: #e8e8e8;
+	border-radius: 10%; 
+	margin: auto;
+	top: 5%;
+	left:0;
+	right: 0;
+	bottom: 0;
+	height: 50%;
+	width: 300px;
+	padding: 20px;
+}
+
+
+.registration-form{
+    position: absolute;
+    background-color: #e8e8e8;
+    margin: auto;
+    top: 2%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 85%;
+    width: 400px;
+    padding: 20px;
+}
+
+.home-page{
+    position: absolute;
+    background-color: #e8e8e8; 
+    margin: auto;
+    top: 5%;
+    left:0;
+    right: 0;
+    bottom: 0;
+    height: 80%;
+    width: 700px;
+    padding: 20px;
+}
+
+.content{
+	    display: block; 
+        margin-left: 4%; 
+        margin-right: auto;
+}
+
+lable.sign-in{
+    margin-top: 20px;
+    margin-left: 18%;
+    color: #435068;
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}
+
+
+lable.registration{
+    margin-top: 20px;
+    margin-left: 10%;
+    color: #435068;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 75px;
+}
+
+
+lable.home{
+    margin-top: 20px;
+    margin-left: 35%;
+    color: #435068;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}
+
+button.sign-in{
+    margin-top: 15%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+
+button.registration{
+    margin-top: 15%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+button.home{
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 80%;
+}
+
+.reg{ 
+	
+	position: relative;
+	top: 20px;
+}
+
+.menu{
+    width: 100%;
+    background: #545fb1;
+}
+
+.list-navigation{
+    display: flex;
+    margin-left: 62%;
+    list-style: none;
+    padding: 0;
+
+}
+
+.nav-item{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link{
+    display: block;
+    padding: .5rem 1rem;
+    width: 150px;
+    border: 1px solid #ffffff;
+    font-size: 17px;
+    font-weight: 800;
+    background-color: #545fb1;
+    color: #ffffff;
+}
+
+.home-img{
+    margin-left: 35%;
+    padding-bottom: 30px;
+    border-radius: 50%;
+}

@@ -4,6 +4,21 @@ body {
 }
 
 
+.sign-in-form{
+	position: absolute;
+	background-color: #e8e8e8;
+	border-radius: 10%; 
+	margin: auto;
+	top: 5%;
+	left:0;
+	right: 0;
+	bottom: 0;
+	height: 50%;
+	width: 300px;
+	padding: 20px;
+}
+
+
 .registration-form{
     position: absolute;
     background-color: #e8e8e8;
@@ -17,26 +32,21 @@ body {
     padding: 20px;
 }
 
-
-.home-page{
-    position: absolute;
-    background-color: #e8e8e8;
-    border-radius: 10%; 
-    margin: auto;
-    top: 5%;
-    left:0;
-    right: 0;
-    bottom: 0;
-    height: 50%;
-    width: 500px;
-    padding: 20px;
-}
-
 .content{
 	    display: block; 
         margin-left: 4%; 
         margin-right: auto;
 }
+
+lable.sign-in{
+    margin-top: 20px;
+    margin-left: 18%;
+    color: #435068;
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}
+
 
 lable.registration{
     margin-top: 20px;
@@ -47,13 +57,31 @@ lable.registration{
     margin-bottom: 75px;
 }
 
+
+lable.home{
+    margin-top: 20px;
+    margin-left: 18%;
+    color: #435068;
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}
+
+button.sign-in{
+    margin-top: 15%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+
 button.registration{
     margin-top: 15%;
 	margin-left: 10%;
 	width: 80%;
 }
 
-.reg{
+.reg{ 
+	
 	position: relative;
 	top: 20px;
 }
