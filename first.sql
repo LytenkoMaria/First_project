@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 03 2021 г., 11:29
+-- Время создания: Фев 03 2021 г., 18:27
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.1.33
 
@@ -46,11 +46,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `surname`, `country`, `region`, `city`, `phone`, `date`, `picture`) VALUES
-(1, 'q', '$2y$10$qE25ZBAffO5kVilCo2pyNuKhi1.FylL5HtgiW2QnTa8Hsr5YZnpaa', 'q', 'q', 'q', 'q', 'q', 'q', '0000-00-00', 'cloud.jpg'),
-(2, 'w', '$2y$10$kPT8svq2dW7zAoYX8LFbxud3dP81xQAvZhd/ACvTAXSfFEsGPYuU6', 'w', 'w', NULL, NULL, NULL, '+(380)544554545', '2021-02-25', 'cloud.jpg'),
-(3, 'e', '$2y$10$w1xDYPv5umDY0.OS6DBczO6RnMo1RQZJg0y16PLPP34jIPZnh4Ow6', 'e', 'e', NULL, NULL, NULL, '+(380)544554545', '2021-02-27', 'cloud.jpg'),
-(4, 'r@mail.com', '$2y$10$7xNMxuhk/LeSqSVosSTkau5UEfI0dzBtFR7CZ19Nje0mlDbDlY4se', 'r', 'r', NULL, NULL, NULL, '+(380)989979054', '2021-02-27', 'W:/domains/First/resources/images/usersImg/arecaceae-leaf-white-green-palm-leaves-material-green-leaf-png-clip-art.png'),
-(5, 'q@gmail.com', '$2y$10$9P4h9QxrvjJ74HR8FEqdYew6xB4uP2suSIWmRXTn26U/n5d5asWGa', 'q', 'q', NULL, NULL, NULL, '+(380)989979054', '2021-02-25', 'W:/domains/First/resources/images/usersImg/list.jpg');
+(4, 'r@mail.com', '$2y$10$7xNMxuhk/LeSqSVosSTkau5UEfI0dzBtFR7CZ19Nje0mlDbDlY4se', 'r', 'r', NULL, NULL, NULL, '+(380)989979054', '2021-02-27', './resources/images/usersImg/2.gif'),
+(5, 'q@gmail.com', '$2y$10$9P4h9QxrvjJ74HR8FEqdYew6xB4uP2suSIWmRXTn26U/n5d5asWGa', 'q', 'q', NULL, NULL, NULL, '+(380)989979054', '2021-02-25', './resources/images/usersImg/2.gif'),
+(6, 's@gmail.com', '$2y$10$6nRwx6c.t3Rqxy8wOXD5H.IGqPds7qJr1IVV8xuVH9U5os/1o7rFS', 's', 's', NULL, NULL, NULL, '+(380)544554545', '2021-02-17', './resources/images/usersImg/22.jpg'),
+(7, 'e@gmail.com', '$2y$10$AbtCeeoqBnnTbn/jsbTNqOY/waBc8A3wV1u3CgTItiRD7zif8wo5i', 'e', 'e', NULL, NULL, NULL, '+(380)544554545', '2021-02-18', 'W:/domains/First/resources/images/Standart.png'),
+(8, 'g@mail.com', '$2y$10$OkLohRYa7rMzUQkwyGRoauqoruUuZ5R26aSNHZbOwv789foiy4yha', 'g', 'g', NULL, NULL, NULL, '+(380)544554545', '2021-02-26', '/resources/images/Standart.png');
 
 --
 -- Индексы сохранённых таблиц
@@ -70,7 +70,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

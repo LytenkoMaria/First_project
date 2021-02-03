@@ -1,7 +1,9 @@
-$(document).ready(function displayImage(img)
+$(document).ready(function()
 {
-    var reader = new FileReader();
-    reader.onload = function(img){
-    	
-    }
+    $(".change-baton").on("click", function () {
+            $(".users-data-form").toggleClass("unset-active");
+            $(".change-data-form").toggleClass("active");
+
+        }
+    )
 });
