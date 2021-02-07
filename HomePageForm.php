@@ -28,13 +28,15 @@ $_SESSION["image"]=$row["picture"];
 $path_avatar ='./resources/images/usersImg/'.$_FILES['picture']['name'];
 
 if(!empty($_POST)) {
-$stmt = $conn->prepare("UPDATE users SET email=:email, name=:name, surname=:surname, phone=:phone, date=:date WHERE id=:id");
-    $stmt->bindParam(':email', $_POST["email"]);
-    $stmt->bindParam(':name', $_POST["name"]);
-    $stmt->bindParam(':surname', $_POST["surname"]);
-    $stmt->bindParam(':date', $_POST["date"]);
-    $stmt->bindParam(':phone', $_POST["tel"]);
-    $stmt->execute();
+$stm = $conn->prepare("UPDATE users SET email=:email, name=:name, surname=:surname, phone=:phone, date=:date WHERE id=:id");
+    $stm->bindParam(':email', $_POST["email"]);
+    $stm->bindParam(':id', $id);
+    $stm->bindParam(':name', $_POST["name"]);
+    $stm->bindParam(':surname', $_POST["surname"]);
+    $stm->bindParam(':date', $_POST["date"]);
+    $stm->bindParam(':phone', $_POST["tel"]);
+    $stm->execute();
+     header("Location:/HomePage.php");
 }
 
 if(move_uploaded_file($_FILES['picture']['tmp_name'], $path_avatar))
@@ -43,9 +45,8 @@ if(move_uploaded_file($_FILES['picture']['tmp_name'], $path_avatar))
           $stmt->bindParam(':picture', $path_avatar);
           $stmt->bindParam(':id', $id);
           $stmt->execute();    
-
           $_SESSION["image"]=$path_avatar;
-          header("Location:/HomePage.php");   
+            
 
     }
 

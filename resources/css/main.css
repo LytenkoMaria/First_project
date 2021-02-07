@@ -212,11 +212,89 @@ lable.user-date{
 } 
 
 .coment-place{
-    background-color: #ffb5b5;
+    background-color: #d6e1ff;
     margin: auto;
     margin-top: 5%;
     height: 500px;
     width: 600px;
     padding: 20px;
     overflow: scroll;
+}
+
+.coments-image{
+    height: 60px;
+    width: 60px;
+    left: -100px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.new-coment{
+    background-color: #a6a6ef;
+    height: 130px;
+    border: 2px solid #1c324e;
+    border-radius: 20px;
+}
+
+textarea.new-coment{
+    overflow: hidden;
+    padding: 8px;
+    padding-left: 10px;
+    outline: none;
+    width: 400px;
+    height: 40px;
+    max-height: 100px;
+    resize: none;
+    margin-top: 25px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+textarea.last-coment{
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    outline: none;
+    width: 400px;
+    height: 40px;
+    max-height: 100px;
+    resize: none;
+}
+
+button.new-coment{
+    margin-left: 75%;
+    height: 40px;
+    width: 120px;
+    border: 0.5px solid #686868;
+    border-radius: 50px;
+    background-color: #3f4eb7;
+}
+
+.image-new-coments{
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    margin-top: -40px;
+    margin-left: 25px;
+}
+
+.dinam-size{
+
+}
+.dinam-size2{
+
+}
+
+.media{
+    display: block;
+    margin-left: 100px;
+}
+
+.new-bar{
+    display: inline; 
+}
+
+.user-name-title{
+    margin-top: -70px;
 }
