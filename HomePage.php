@@ -1,22 +1,12 @@
 <?php
 session_start();
 
-require('Header.php');
 require('HomePageForm.php');
+require('Header.php');
+require('Menu.php');
+
 ?>
 <script src="./resources/js/Script.js"></script>
-
-
-
-            <div class="menu">
-                   <ul class="list-navigation">
-                        <li class="nav-item"><a href="./HomePage.php" class="nav-link">Profile</a></li>
-                        <li class="nav-item"><a href="./Coments.php" class="nav-link">Coment</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Home page3</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Home page4</a></li>
-                   </ul>
-            </div>
-
 
       <div  class="home-page" >
 
@@ -36,7 +26,7 @@ require('HomePageForm.php');
                                    <textarea name="data" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["date"]?></textarea>
                                       <lable class="user-date">Date of Birth</lable>
 
-                                  <button  type="submit" name="submit" class=" home change-baton btn btn-primary"><strong>Change</strong></button>
+                                  <button  type="submit" name="submit" class=" home change-batton btn btn-primary"><strong>Change</strong></button>
          
                                </div>
                               

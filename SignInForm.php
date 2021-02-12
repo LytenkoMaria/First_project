@@ -1,5 +1,6 @@
 <?php
 session_start();
+require('ConnectionDb.php');
 $eroo="";
 
 if(isset($_SESSION["auth"]))
@@ -9,9 +10,6 @@ if(isset($_SESSION["auth"]))
 
 
 if(!empty($_POST)) {
-
-
-$conn= new PDO("mysql:host=localhost; dbname=first", "root","root");
 
     $stmt = $conn->prepare("SELECT * FROM users WHERE email=:email");
     $stmt->bindParam(':email', $_POST["email"]);

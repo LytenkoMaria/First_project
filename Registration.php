@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if(isset($_SESSION["auth"]))
+{
+    header("Location:/HomePage.php");
+}
 
 require('Header.php');
 
@@ -17,7 +23,7 @@ require('Header.php');
                        <input name="tel" type="tel"  class="mt-4 form-control " value="+(380)" maxlength="15">
                        <input required type="date" class=" mt-4 form-control " name="date">
 
-                       <a href="./index.html" class="reg">Already have an account?</a>
+                       <a href="./index.php" class="reg">Already have an account?</a>
                        <button  type="submit" name="submit" class="registration btn btn-primary"><strong>Register</strong></button>
 
                   </div>

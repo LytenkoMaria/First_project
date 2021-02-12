@@ -40,7 +40,7 @@ body {
     right: 0;
     bottom: 0;
     height: 800px;
-    width: 700px;
+    width: 900px;
     padding: 20px;
 }
 
@@ -72,7 +72,7 @@ lable.registration{
 
 lable.home{
     margin-top: 20px;
-    margin-left: 35%;
+    margin-left: 40%;
     color: #435068;
     font-size: 40px;
     font-weight: 600;
@@ -117,7 +117,7 @@ button.save-change{
 
 .list-navigation{
     display: flex;
-    margin-left: 58%;
+    margin-left: 73%;
     list-style: none;
     padding: 0;
 
@@ -133,7 +133,6 @@ button.save-change{
     display: block;
     padding: .5rem 1rem;
     width: 150px;
-  /*  border: 1px solid #ffffff;*/
     font-size: 17px;
     font-weight: 800;
     background-color: #545fb1;
@@ -148,7 +147,7 @@ button.save-change{
 
 .home-img{
     border: 5px solid #6cadff;
-    margin-left: 35%;
+    margin-left: 40%;
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -170,7 +169,7 @@ button.save-change{
 .users-data-form{
     margin-top: 20px;
     background-color: #e8e8e8;
-    margin-left: 12%;
+    margin-left: 22%;
     width: 500px;
     height: 350px;
 }
@@ -204,7 +203,7 @@ lable.user-date{
 .change{
     margin-top: 20px;
     width: 400px;
-    margin-left: 20%;
+    margin-left: 26%;
 }
 
 .users-data-form.unset-active{
@@ -212,27 +211,29 @@ lable.user-date{
 } 
 
 .coment-place{
-    background-color: #d6e1ff;
+    background-color: #a7dcff;
     margin: auto;
     margin-top: 5%;
     height: 500px;
-    width: 600px;
+    width: 800px;
     padding: 20px;
     overflow: scroll;
 }
 
 .coments-image{
-    height: 60px;
-    width: 60px;
-    left: -100px;
+    height: 65px;
+    width: 65px;
+    left: -90px;
+    top: 10px;
     border-radius: 50%;
     position: relative;
+    border: 2px solid #a6a6ef;
 }
 
 .new-coment{
-    background-color: #a6a6ef;
+    background-color: #46b2fa;
     height: 130px;
-    border: 2px solid #1c324e;
+    border: 2px solid #545fb1;
     border-radius: 20px;
 }
 
@@ -246,14 +247,29 @@ textarea.new-coment{
     max-height: 100px;
     resize: none;
     margin-top: 25px;
-    border-radius: 50px;
+    border-radius: 0px;
     background-color: white;
 }
 
 textarea.last-coment{
+    margin-top: -20px;
     overflow: hidden;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    outline: none;
+    width: 400px;
+    height: 40px;
+    max-height: 100px;
+    resize: none;
+}
+
+textarea.reply-coment{
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 5px;
+    margin-bottom: 15px;
     padding-left: 10px;
     outline: none;
     width: 400px;
@@ -263,26 +279,47 @@ textarea.last-coment{
 }
 
 button.new-coment{
+    margin-top: -120px;
     margin-left: 75%;
     height: 40px;
     width: 120px;
-    border: 0.5px solid #686868;
+    border: 1px solid #1c324e;
     border-radius: 50px;
     background-color: #3f4eb7;
 }
 
+button.reply{
+    margin-left: 330px;
+    height: 35px;
+    border: 0.5px solid #545fb1;
+    background-color: #0c96f2;
+    position: relative;
+    top: -25px;
+}
+
+button.create-reply-comment{
+    margin-left: 4px;
+    height: 35px;
+    position: relative;
+    top: -30px;
+    height: 40px;
+    width: 100px;
+    border: 0.5px solid #1c324e;
+    border-radius: 50px;
+    color: #545fb1;
+    background-color: #ffffff;
+}
+
+
 .image-new-coments{
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    margin-top: -40px;
+    height: 80px;
+    width: 80px;
     margin-left: 25px;
+    margin-top: -25px;
 }
 
 .dinam-size{
-
-}
-.dinam-size2{
 
 }
 
@@ -296,5 +333,49 @@ button.new-coment{
 }
 
 .user-name-title{
-    margin-top: -70px;
+    color: white;
+    margin-bottom: -10px;
+    margin-top: -60px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.reply-comment{
+    display: none;
+    position: relative;
+    height: 70px;
+    width: 550px;
+    left: -100px;
+    background-color: #7a83c7;
+    margin-bottom: 20px;
+    border: 2px solid #1c324e;
+}
+
+.replay-close{
+   background-color: #dd3030 !important;
+    position: relative;
+    opacity: 100%;
+    height: 29px;
+    width: 26px !important;
+    left: 2px;
+    top: -2px;
+    font-size: 1.9rem;
+    color: #fff;
+}
+
+.u-n{
+    margin-left: 50px !important: 
+}
+
+.child_coments{
+ margin-left: 100px !important;
+}
+
+.bord{
+    margin-left: -100px;
+    margin-bottom: -20px;
+    padding-left: 105px;
+    width: 510px;
+    height: 34px;
+    background-color: #545fb1;
 }

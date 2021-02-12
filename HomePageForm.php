@@ -1,20 +1,12 @@
 <?php
-
 session_start();
+require('ConnectionDb.php');
+
 if(!isset($_SESSION["auth"]))
 {
     header("Location:/");
-    unset($_SESSION["auth"]);
-}
-else{
-    if(isset($_POST["Exit"]))
-    {
-        unset($_SESSION["auth"]);
-        header("Location:/");
-    }
 }
 
-$conn= new PDO("mysql:host=localhost; dbname=first", "root","root");
 $stm = $conn->prepare("SELECT * FROM users WHERE id=:id ");
 $id=$_SESSION["auth"];
 $stm->bindParam(':id', $id);
@@ -36,19 +28,17 @@ $stm = $conn->prepare("UPDATE users SET email=:email, name=:name, surname=:surna
     $stm->bindParam(':date', $_POST["date"]);
     $stm->bindParam(':phone', $_POST["tel"]);
     $stm->execute();
-     header("Location:/HomePage.php");
-}
+    header("Location:/HomePage.php"); 
 
-if(move_uploaded_file($_FILES['picture']['tmp_name'], $path_avatar))
-{
+     if(move_uploaded_file($_FILES['picture']['tmp_name'], $path_avatar))
+       {
           $stmt = $conn->prepare("UPDATE users SET picture=:picture WHERE id=:id");
           $stmt->bindParam(':picture', $path_avatar);
           $stmt->bindParam(':id', $id);
           $stmt->execute();    
           $_SESSION["image"]=$path_avatar;
-            
-
-    }
+      }
+}
 
 
  

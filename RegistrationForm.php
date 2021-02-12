@@ -1,10 +1,12 @@
 <?php
+session_start();
+require('ConnectionDb.php');
 
 $path_image_standart ='/resources/images/Standart.png';
 $error="";
 if(!empty($_POST)) {
 
-$conn= new PDO("mysql:host=localhost; dbname=first", "root","root");
+
 
 $stm = $conn->prepare("SELECT * FROM users WHERE email=:email ");
     $stm->bindParam(':email', $_POST["email"]);
@@ -26,9 +28,14 @@ $stmt = $conn->prepare("INSERT INTO users (email,password,name,surname,phone,dat
     $stmt->bindParam(':date', $_POST["date"]);
     $stmt->bindParam(':phone', $_POST["tel"]);
     $stmt->bindParam(':picture', $path_image_standart);
+
     $stmt->execute();
+       
+       $last_id=$conn->lastInsertId();
+       $_SESSION["auth"]=$last_id;
+       header("Location:/HomePage.php");
     }
 
-    header("Location:/");
+
 }
    ?>
