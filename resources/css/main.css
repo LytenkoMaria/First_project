@@ -1,35 +1,38 @@
 body {
     background-color: #000021;
-    background: #1c324e;
+    background: #345e72;
 }
 
 
 .sign-in-form{
-	position: absolute;
-	background-color: #e8e8e8;
-	border-radius: 10%; 
-	margin: auto;
-	top: 5%;
-	left:0;
-	right: 0;
-	bottom: 0;
-	height: 50%;
-	width: 300px;
-	padding: 20px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 15px 17px 17px #133841;
+    position: absolute;
+    background-color: #ffffff;
+    margin: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 600px;
+    width: 800px;
+    padding-right: 30px;
 }
 
 
 .registration-form{
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 15px 17px 17px #133841;
     position: absolute;
-    background-color: #e8e8e8;
+    background-color: #ffffff;
     margin: auto;
-    top: 2%;
+    top: 5%;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 85%;
-    width: 400px;
-    padding: 20px;
+    height: 600px;
+    width: 800px;
+    padding-right: 30px;
 }
 
 .home-page{
@@ -51,22 +54,24 @@ body {
 }
 
 lable.sign-in{
-    margin-top: 20px;
-    margin-left: 18%;
-    color: #435068;
-    font-size: 55px;
-    font-weight: 600;
+    margin-top: 40px;
+    margin-left: 65px;
+    color: #345e72;
+    font-size: 60px;
+    font-weight: 400;
     margin-bottom: 75px;
+    font-size: 40px;
+    font-weight: 500;
 }
 
 
 lable.registration{
+    position: absolute;
+    margin-left: 20px;
     margin-top: 20px;
-    margin-left: 10%;
-    color: #435068;
-    font-size: 50px;
+    color: #345e72;
+    font-size: 40px;
     font-weight: 500;
-    margin-bottom: 75px;
 }
 
 
@@ -87,8 +92,8 @@ button.sign-in{
 
 
 button.registration{
-    margin-top: 15%;
 	margin-left: 10%;
+    margin-top: 15px;
 	width: 80%;
 }
 
@@ -105,9 +110,23 @@ button.save-change{
 }
 
 .reg{ 
-	
-	position: relative;
-	top: 20px;
+    position: relative;
+    border: 3px solid white;
+    background: none;
+    border-radius: 50px;
+    top: 360px;
+    left: 150px;
+    width: 220px;
+    height: 50px;
+    z-index: 10;
+}
+
+a.reg{
+    position: initial;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .menu{
@@ -201,9 +220,9 @@ lable.user-date{
 
 
 .change{
-    margin-top: 20px;
+    margin-top: -50px;
     width: 400px;
-    margin-left: 26%;
+    margin-left: -85%;
 }
 
 .users-data-form.unset-active{
@@ -379,3 +398,71 @@ button.create-reply-comment{
     height: 34px;
     background-color: #545fb1;
 }
+
+.tab-form{
+    margin-left: 520px;
+    margin-top: 100px;
+}
+
+.sign-up-form{
+   margin-left: 520px;
+}
+
+.sign-in-image{
+    box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 26%);
+    position: absolute;
+    height: 600px;
+    width: 500px;
+    z-index: 5;
+}
+
+img.sign-in-image{
+    position: absolute;
+    z-index: 2;
+}
+
+.form-control{
+ box-shadow: inset 2px 2px 5px #747883, inset -5px -5px 10px #ffffff73 !important;
+}
+
+
+.btn-input{
+    color: #fff !important;
+    background-color: #66c8d5 !important;
+    border-color: #66c8d5 !important;
+}
+
+lable.sign-up-height{
+    position: absolute;
+    color: white;
+    margin-top: 125px;
+    margin-left: 135px;
+    font-size: 40px;
+    margin-bottom: 75px;
+}
+
+
+lable.sign-up{
+    position: absolute;
+    color: white;
+    margin-top: 125px;
+    margin-left: 55px;
+    font-size: 40px;
+    margin-bottom: 75px;
+}
+
+.reg-content{
+    position: absolute;
+    margin-top: 80px;
+    width: 250px;
+} 
+
+.sign-up-text{
+    position: absolute;
+    color: white;
+    margin-top: 220px;
+    width: 350px;
+    margin-left: 115px;
+    font-size: 20px;
+    margin-bottom: 75px;
+}   

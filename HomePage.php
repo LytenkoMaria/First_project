@@ -45,7 +45,7 @@ require('Menu.php');
                                            <input required type="date" class=" mt-4 form-control " name="date" 
                                            value="<?php echo $_SESSION["date-user"]["date"]?>">
 
-                                            <button  type="submit" name="submit" class=" save-change btn btn-primary"><strong>Save hanges</strong></button>
+                                            <button  type="submit" name="submit" class=" save-change btn btn-primary"><strong>Save changes</strong></button>
                                         </div>
                                       </form>
                                 </div>

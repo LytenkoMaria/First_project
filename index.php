@@ -13,6 +13,10 @@ require('Header.php');
 ?>
 
       <div  class="sign-in-form" >
+             <div  class="sign-in-image" > <lable class="sign-up">Don't have an account?</lable>
+              <lable class="sign-up-text">Enter your personal details and start work whith us</lable></div>
+             <img  class="sign-in-image" src="./resources/images/fon.jpg" >
+             <button  type="button" class="reg" disabled><a href="./Registration.php" class="reg">Sign Up</a></button>
 
               <form action="./SignInForm.php" id="sign-in-form" method="post" class="tab-form">
                  
@@ -20,8 +24,7 @@ require('Header.php');
                    <div class="content">
                        <input required type="email" class=" form-control mt-4" name="email"  autocomplete="email" placeholder="Email">
                        <input required type="password" class=" form-control mt-4" name="password"  placeholder="password">
-                       <a href="./Registration.php" class="reg">Don't have an account?</a>
-                       <button  type="submit" name="submit" class="sign-in btn btn-primary"><strong>Sign in</strong></button>
+                       <button  type="submit" name="submit" class="sign-in btn btn-input"><strong>Sign in</strong></button>
                   </div>
              </form>
     

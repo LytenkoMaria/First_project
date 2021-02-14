@@ -26,8 +26,9 @@ $(document).on("submit",".create-new-comment", function(e) {
             $('.new-bar').append("<button  type='button' id='reply' data-id='"+result.id+"' name='reply' class=' reply btn btn-primary'><strong>Reply</strong></button>");
             $('.new-bar').append("<textarea name='coments' data-id='"+result.id+"' class='last-coment' readonly>"+result.text+"\n</textarea>");
             $('.new-bar').append("<form method='post' class='create-reply-comment reply-comment' data-id='"+result.id+"'><input name='parent_id' type='hidden' value='"+result.id+"'></form>"); 
-            $('.new-bar').append("<div class='child_coments' data-id='"+result.id+"'></div>");  
-                                          
+            $('.new-bar').append("<div class='child_coments' data-id='"+result.id+"'></div>"); 
+             $('.new-coment').val('');  
+                                         
                           // console.log(result); 
                                    },
         error: function (data) {
@@ -60,7 +61,7 @@ $(document).on("submit",".create-reply-comment", function(r) {
           $(".create-reply-comment").hide();  
           var data_id =$(this).attr("data-id");
 
-        var form_reply = $(this);
+        var form_reply = $(this);     
         $.ajax({
           type: "post",
           dataType: 'json',
