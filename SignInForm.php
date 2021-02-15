@@ -6,7 +6,9 @@ $eroo="";
 if(isset($_SESSION["auth"]))
 {
     header("Location:/HomePage.php");
+    
 }
+
 
 
 if(!empty($_POST)) {

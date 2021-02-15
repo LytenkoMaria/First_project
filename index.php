@@ -1,13 +1,13 @@
 <?php
 session_start();
-/*
-if(!isset($_SESSION["auth"]))
+
+
+if(isset($_SESSION["auth"]))
 {
-    header("Location:/");
-    unset($_SESSION["auth"]);
+   header("Location:/HomePage.php");
 }
 
-*/
+
 require('Header.php');
 
 ?>
