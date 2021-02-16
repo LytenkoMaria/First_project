@@ -7,14 +7,14 @@ $stmt = $conn->prepare("SELECT comments.id, comments.id_parent_comments, comment
 $stmt->bindParam(':child',$child);
     $stmt->execute();
 
-$d=[];
+$masReply=[];
 while($row = $stmt->fetch(PDO::FETCH_ASSOC))
     {  
 
-$d[]= array( "name" => $row["name"], "picture" => $row["picture"], "id" => $row["id"], "date_comments" => $row["date_comments"], "user_id" => $row["user_id"], "id_parent_comments" => $row["id_parent_comments"], "text" => $row["comments"],  "status" => "succes"); 
+$masReply[]= array( "name" => $row["name"], "picture" => $row["picture"], "id" => $row["id"], "date_comments" => $row["date_comments"], "user_id" => $row["user_id"], "id_parent_comments" => $row["id_parent_comments"], "text" => $row["comments"],  "status" => "succes"); 
 
   }  
 
-echo json_encode($d);
+echo json_encode($masReply);
 
 ?>

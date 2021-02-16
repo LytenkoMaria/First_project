@@ -1,15 +1,13 @@
 <?php
 session_start();
 require('ConnectionDb.php');
-$eroo="";
+$error="";
 
 if(isset($_SESSION["auth"]))
 {
     header("Location:/HomePage.php");
     
 }
-
-
 
 if(!empty($_POST)) {
 
@@ -28,7 +26,7 @@ if(!empty($_POST)) {
         }
         else{
             $eroo="Incorrect Email or Password";
-            $_SESSION['Email_exist']=$eroo;
+            $_SESSION['Email_exist']=$error;
             header("Location:/");
             }
 }

@@ -283,19 +283,7 @@ textarea.last-comments{
     resize: none;
 }
 
-textarea.reply-comments{
-    overflow: hidden;
-    margin-left: 15px;
-    margin-top: 15px;
-    padding: 5px;
-    margin-bottom: 15px;
-    padding-left: 10px;
-    outline: none;
-    width: 400px;
-    height: 40px;
-    max-height: 100px;
-    resize: none;
-}
+
 
 button.new-comments{
     margin-top: -120px;
@@ -368,6 +356,20 @@ button.create-reply-comments{
     background-color: #7a83c7;
     margin-bottom: 20px;
     border: 2px solid #1c324e;
+}
+
+textarea.reply-com{
+    overflow: hidden;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding: 5px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    outline: none;
+    width: 400px;
+    height: 40px;
+    max-height: 100px;
+    resize: none;
 }
 
 .replay-close{

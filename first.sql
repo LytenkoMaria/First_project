@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 12 2021 г., 17:41
+-- Время создания: Фев 16 2021 г., 13:28
 -- Версия сервера: 10.3.22-MariaDB
 -- Версия PHP: 7.1.33
 
@@ -24,33 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `coments`
+-- Структура таблицы `comments`
 --
 
-CREATE TABLE `coments` (
+CREATE TABLE `comments` (
   `id` bigint(20) NOT NULL,
-  `id_parent_coment` bigint(20) NOT NULL,
-  `coment` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_parent_comments` bigint(20) NOT NULL,
+  `comments` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `user_id` bigint(20) DEFAULT NULL,
-  `date_coment` datetime NOT NULL
+  `date_comments` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `coments`
+-- Дамп данных таблицы `comments`
 --
 
-INSERT INTO `coments` (`id`, `id_parent_coment`, `coment`, `user_id`, `date_coment`) VALUES
+INSERT INTO `comments` (`id`, `id_parent_comments`, `comments`, `user_id`, `date_comments`) VALUES
 (0, 0, NULL, NULL, '0000-00-00 00:00:00'),
-(529, 0, 'hello', 29, '2021-12-02 17:31:08'),
-(530, 0, 'Wow', 30, '2021-12-02 17:31:48'),
-(531, 529, 'Cry', 30, '2021-12-02 17:32:00'),
-(532, 0, 'Frozen!!!!!', 31, '2021-12-02 17:32:44'),
-(533, 529, 'drop', 31, '2021-12-02 17:32:55'),
-(534, 531, 'drible', 31, '2021-12-02 17:33:03'),
-(535, 531, 'Errorsssss', 29, '2021-12-02 17:35:05'),
-(536, 532, 'find', 29, '2021-12-02 17:35:14'),
-(537, 534, 'fire', 29, '2021-12-02 17:35:21'),
-(538, 530, 'pop', 29, '2021-12-02 17:35:28');
+(625, 0, 'Hello!', 29, '2021-02-16 13:22:19'),
+(626, 0, 'Red hunt', 29, '2021-02-16 13:22:37'),
+(627, 0, 'Follow butterfly', 29, '2021-02-16 13:23:07'),
+(628, 625, 'go', 30, '2021-02-16 13:25:51'),
+(629, 626, 'sun', 31, '2021-02-16 13:26:35'),
+(630, 626, 'fly', 31, '2021-02-16 13:26:48');
 
 -- --------------------------------------------------------
 
@@ -77,21 +73,25 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `name`, `surname`, `country`, `region`, `city`, `phone`, `date`, `picture`) VALUES
-(29, 'q@gmail.com', '$2y$10$zaoN3iPAwbSgMlhMiCMXvOV/9/Bvs2bwxWO.9VlCd4wAG2L9djsN2', 'Quiter', 'q', NULL, NULL, NULL, '+(380)', '2021-02-14', './resources/images/usersImg/22.jpg'),
+(29, 'workproject3006@gmail.com', '$2y$10$zaoN3iPAwbSgMlhMiCMXvOV/9/Bvs2bwxWO.9VlCd4wAG2L9djsN2', 'Quiter', 'q', NULL, NULL, NULL, '+(380)', '2021-02-14', './resources/images/usersImg/22.jpg'),
 (30, 'r@mail.com', '$2y$10$FZDax6mdF5h6Qvzjky2T9em2ACS2WreVBNe63sd3u1uXjyPdtB/6.', 'Raisen', 'r', NULL, NULL, NULL, '+(380)', '2021-02-04', './resources/images/usersImg/cloud.jpg'),
-(31, 's@gmail.com', '$2y$10$Mp.oHH0UPAVX3e2KoRfblu9GZIDwok/LFfd8DOdsoUDznRjYjlM7O', 'Sasha', 's', NULL, NULL, NULL, '+(380)', '2021-02-21', './resources/images/usersImg/mint.jpg');
+(31, 's@gmail.com', '$2y$10$Mp.oHH0UPAVX3e2KoRfblu9GZIDwok/LFfd8DOdsoUDznRjYjlM7O', 'Sasha', 's', NULL, NULL, NULL, '+(380)', '2021-02-21', './resources/images/usersImg/mint.jpg'),
+(32, 'jj@gmail', '$2y$10$RwPof0aVTCDAve8vWFJzIeLR7WiQgeQo/QhdVc.nm5XvoH8gQ7NMS', 'jf', 'jf', NULL, NULL, NULL, '+(380)', '2021-02-07', './resources/images/usersImg/fon.jpg'),
+(33, 'k@gmail.com', '$2y$10$k2l.FTVEm/.hbdyt37jLc.TXcM4FB2MbAIeaUEqRO0/Uv8P3XfskW', 'kk', 'k', NULL, NULL, NULL, '+(380)', '2021-02-03', '/resources/images/Standart.png'),
+(34, 'm@mail.com', '$2y$10$iTWjETYXhGlfRdPlhfo7DuwNV/4jAcFXmz3LaQMXbcBmjY4tPiSme', 'm', 'm', NULL, NULL, NULL, '+(380)m', '2021-02-11', '/resources/images/Standart.png'),
+(35, 'n@mail.com', '$2y$10$X88jbYSxb6TuluLV4C18yuaBbwRfeM8dT3hc5Bmeo73GfMa/MZPGO', 'nn', 'nn', NULL, NULL, NULL, '+(380)', '2021-02-13', './resources/images/usersImg/trees.png');
 
 --
 -- Индексы сохранённых таблиц
 --
 
 --
--- Индексы таблицы `coments`
+-- Индексы таблицы `comments`
 --
-ALTER TABLE `coments`
+ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`),
   ADD KEY `user_id` (`user_id`),
-  ADD KEY `id_parent_coment` (`id_parent_coment`);
+  ADD KEY `id_parent_coment` (`id_parent_comments`);
 
 --
 -- Индексы таблицы `users`
@@ -104,27 +104,27 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT для таблицы `coments`
+-- AUTO_INCREMENT для таблицы `comments`
 --
-ALTER TABLE `coments`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=539;
+ALTER TABLE `comments`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=631;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
 
 --
--- Ограничения внешнего ключа таблицы `coments`
+-- Ограничения внешнего ключа таблицы `comments`
 --
-ALTER TABLE `coments`
-  ADD CONSTRAINT `coments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
-  ADD CONSTRAINT `coments_ibfk_2` FOREIGN KEY (`id_parent_coment`) REFERENCES `coments` (`id`);
+ALTER TABLE `comments`
+  ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`id_parent_comments`) REFERENCES `comments` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

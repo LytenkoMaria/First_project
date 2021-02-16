@@ -29,7 +29,7 @@ $(document).on("submit",".create-new-comments", function(e) {
             $('.new-bar').append("<div class='child_comments' data-id='"+result.id+"'></div>"); 
              $('.new-comments').val('');  
                                          
-                           console.log(result,"er"); 
+                           console.log(result); 
                                    },
         error: function (data) {
         console.log('Error', data);
@@ -42,13 +42,13 @@ $(document).on("click",".reply", function (){
            $('.new-comments').hide();   
 
            var data_id =$(this).attr("data-id");
-           //console.log(data_id);         
-           $('.reply-comments[data-id="'+ data_id +'"]').css("display","block");
-           $('.reply-comments[data-id="'+ data_id +'"]').append('<textarea id="dinam-size" name="comments" class="reply-comments"></textarea>');
+           console.log(data_id);         
+          
+           $('.reply-comments[data-id="'+ data_id +'"]').append('<textarea id="dinam-size" name="comments" class="reply-com"></textarea>');
            $('.reply-comments[data-id="'+ data_id +'"]').append("<input name='parent_id' type='hidden' value='"+data_id+"'>");
            $('.reply-comments[data-id="'+ data_id +'"]').append('<button type="button" data-id="'+data_id+'"  class="close replay-close">&times;</button>');
            $('.reply-comments[data-id="'+ data_id +'"]').append('<button  data-id="'+data_id+'" type="submit" id="create-reply-comments" name="create-reply-comments" class=" create-reply-comments btn btn-primary"><strong>Send</strong></button>');
-           
+           $('.reply-comments[data-id="'+ data_id +'"]').css("display","block");
         }
     );
 
@@ -73,7 +73,7 @@ $(document).on("submit",".create-reply-comments", function(r) {
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<button  type='button' id='reply' data-id='"+result.id+"' name='reply' class=' reply btn btn-primary'><strong>Reply</strong></button>");
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<textarea name='comments' data-id='"+result.id+"' class='last-comments' readonly>"+result.text+"\n</textarea>");
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<form method='post' class='create-reply-comments reply-comments' data-id='"+result.id+"'><input name='parent_id' type='hidden' value='"+result.id+"'></form>"); 
-            $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<div class='child_coments' data-id='"+result.id+"'></div>"); 
+            $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<div class='child_comments' data-id='"+result.id+"'></div>"); 
 
          $('.reply-comments[data-id="'+ data_id +'"]').html("<form method='post' class='create-reply-comments reply-comments' data-id='"+ data_id +"'></form>"); 
                           console.log(result); },
