@@ -68,7 +68,7 @@ lable.sign-in{
 lable.registration{
     position: absolute;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: -20px;
     color: #345e72;
     font-size: 40px;
     font-weight: 500;
@@ -455,7 +455,7 @@ lable.sign-up{
 
 .reg-content{
     position: absolute;
-    margin-top: 80px;
+    margin-top: 30px;
     width: 250px;
 } 
 

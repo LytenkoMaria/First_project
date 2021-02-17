@@ -21,8 +21,8 @@ $(document).on("submit",".create-new-comments", function(e) {
           url: "./CommentsForm.php",
           data: form.serialize(),
           success: function(result) { 
-            $('.new-bar').append("<img class='comments-image mr-3' src='"+result.picture_path+"'>");
-            $('.new-bar').append("<div class='bord'><div class='user-name-title'><h6>"+result.user_name+"</h6>"+result.date_comments+"</div></div>");
+            $('.new-bar').append("<img class='comments-image mr-3' src='"+result.picture_path+"'>");            
+            $('.new-bar').append("<div class='bord'><div class='user-name-title'>"+result.user_name+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+result.date_comments+"</div></div>");
             $('.new-bar').append("<button  type='button' id='reply' data-id='"+result.id+"' name='reply' class=' reply btn btn-primary'><strong>Reply</strong></button>");
             $('.new-bar').append("<textarea name='comments' data-id='"+result.id+"' class='last-comments' readonly>"+result.text+"\n</textarea>");
             $('.new-bar').append("<form method='post' class='create-reply-comments reply-comments' data-id='"+result.id+"'><input name='parent_id' type='hidden' value='"+result.id+"'></form>"); 
@@ -69,7 +69,7 @@ $(document).on("submit",".create-reply-comments", function(r) {
           data: form_reply.serialize(),
           success: function(result) { 
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<img class='comments-image mr-3' src='"+result.picture+"'>");
-            $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<div class='bord'><div class='user-name-title'><h6>"+result.user_name+"</h6>"+result.date_comments+"</div></div>");
+            $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<div class='bord'><div class='user-name-title'>"+result.user_name+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+result.date_comments+"</div></div>");
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<button  type='button' id='reply' data-id='"+result.id+"' name='reply' class=' reply btn btn-primary'><strong>Reply</strong></button>");
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<textarea name='comments' data-id='"+result.id+"' class='last-comments' readonly>"+result.text+"\n</textarea>");
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<form method='post' class='create-reply-comments reply-comments' data-id='"+result.id+"'><input name='parent_id' type='hidden' value='"+result.id+"'></form>"); 

@@ -16,9 +16,12 @@ require('Header.php');
              <img  class="sign-in-image" src="./resources/images/fon.jpg" >
              <button  type="button" class="reg" disabled><a href="./index.php" class="reg">Sign in</a></button>
               <form action="./RegistrationForm.php" id="RegistrationForm" method="post" class="sign-up-form">
-                 
+                                           
+                  <p class="<?php echo $_SESSION['alertClass']; ?>" role="alert"> <?php echo $_SESSION["SignUpError"]; unset($_SESSION["SignUpError"]); unset($_SESSION["alertClass"]); ?> </p> 
+
                  <lable class="registration">Registration</lable>
                    <div class="reg-content">
+
                        <input required type="email" class=" form-control mt-4" name="email"  autocomplete="email" placeholder="Email">
                        <input required type="text" class=" form-control mt-4" name="name"  autocomplete="name" placeholder="Name">
                        <input required type="text" class=" form-control mt-4" name="surname"  autocomplete="surname" placeholder="Surname">

@@ -1,7 +1,6 @@
 <?php
 session_start();
 require('ConnectionDb.php');
-$error="";
 
 if(isset($_SESSION["auth"]))
 {
@@ -18,6 +17,8 @@ if(!empty($_POST)) {
 
      $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
+    if(($row["token"]==1)&&($row["verified_at"]!=NULL)){
+        
 
         if(password_verify($password,$row["password"])>0)
         {
@@ -25,10 +26,22 @@ if(!empty($_POST)) {
             header("Location:/HomePage.php");
         }
         else{
-            $eroo="Incorrect Email or Password";
-            $_SESSION['Email_exist']=$error;
+            $error="Incorrect Email or Password";
+            $alertClass="alert alert-danger";
+            $_SESSION['SignInError'] = $error;
+            $_SESSION['alertClass'] = $alertClass;
             header("Location:/");
             }
+    }
+    else{
+            $error="You haven't passed email verificated";
+            $alertClass="alert alert-danger";
+            $_SESSION['SignInError'] = $error;
+            $_SESSION['alertClass'] = $alertClass;
+            header("Location:/");
+            }
+
+
 }
     ?>
 
