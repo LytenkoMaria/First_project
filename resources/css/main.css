@@ -84,6 +84,16 @@ lable.home{
     margin-bottom: 75px;
 }
 
+lable.olx{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 30%;
+    color: #435068;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}    
+
 button.sign-in{
     margin-top: 15%;
 	margin-left: 10%;
@@ -136,7 +146,8 @@ a.reg{
 
 .list-navigation{
     display: flex;
-    margin-left: 73%;
+    text-align: center;
+    margin-left: 60%;
     list-style: none;
     padding: 0;
 

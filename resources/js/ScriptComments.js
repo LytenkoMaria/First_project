@@ -1,5 +1,5 @@
 
-   
+ /*  
 var textarea = document.querySelector(".dinam-size");
 textarea.addEventListener('keydown', autosize);
              
@@ -11,7 +11,7 @@ function autosize(){
     el.style.cssText = 'height:' + el.scrollHeight + 'px';
   },0);
 }
-
+*/
 $(document).on("submit",".create-new-comments", function(e) {
          e.preventDefault();
         var form = $(this);
