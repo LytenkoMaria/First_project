@@ -13,21 +13,18 @@ require('Menu.php');
               
                  <lable class="home">HOME PAGE</lable>
                       <img src="<?php echo $_SESSION["image"]?>" class="home-img">
-                                <div class="users-data-form">
-                                      
-                                   <textarea name="name" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["name"]?></textarea>
-                                      <lable class="user-date">Name</lable>
-                                   <textarea name="surname" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["surname"]?></textarea>
-                                      <lable class="user-date">Surname</lable>
-                                   <textarea name="email" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["email"]?></textarea>
-                                      <lable class="user-date">Email</lable>
-                                   <textarea name="tel" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["phone"]?></textarea>
-                                      <lable class="user-date">Phone number</lable>
-                                   <textarea name="data" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["date"]?></textarea>
-                                      <lable class="user-date">Date of Birth</lable>
-
-                                  <button  type="submit" name="submit" class=" home change-batton btn btn-primary"><strong>Change</strong></button>
-         
+                                <div class="users-data-form">                                     
+                                  <textarea name="name" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["name"]?></textarea>
+                                    <lable class="user-date">Name</lable>
+                                  <textarea name="surname" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["surname"]?></textarea>
+                                     <lable class="user-date">Surname</lable>
+                                  <textarea name="email" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["email"]?></textarea>
+                                     <lable class="user-date">Email</lable>
+                                  <textarea name="tel" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["phone"]?></textarea>
+                                     <lable class="user-date">Phone number</lable>
+                                  <textarea name="data" class="users-data" readonly=""><?php echo $_SESSION["date-user"]["date"]?></textarea>
+                                     <lable class="user-date">Date of Birth</lable>
+                                  <button  type="submit" name="submit" class=" home change-batton btn btn-primary"><strong>Change</strong></button>        
                                </div>
                               
                             

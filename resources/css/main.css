@@ -42,7 +42,19 @@ body {
     left:0;
     right: 0;
     bottom: 0;
-    height: 800px;
+    height: auto;
+    width: 900px;
+    padding: 20px;
+}
+
+.announcements-page{
+    background-color: #545fb1;
+    margin: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
     width: 900px;
     padding: 20px;
 }
@@ -87,8 +99,11 @@ lable.home{
 lable.olx{
     margin-top: 20px;
     text-align: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 30px;
     margin-left: 30%;
-    color: #435068;
+    color: #545fb1;
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 75px;
@@ -201,7 +216,6 @@ a.reg{
     background-color: #e8e8e8;
     margin-left: 22%;
     width: 500px;
-    height: 350px;
 }
 
 lable.user-date{
@@ -479,3 +493,141 @@ lable.sign-up{
     font-size: 20px;
     margin-bottom: 75px;
 }   
+
+.announcements{
+    margin-top: 50px;
+}
+
+.new-announcements{
+    background-color: #e8e8e8;
+    border: 2px solid #c9c9c9;
+    height: 200px;
+}
+
+button.update{
+    margin-top: 100px;
+    margin-left: -32%;
+    width: 20%;
+    color: #fff !important;
+    background-color: #598fda !important;
+    border-color: #598fda !important;
+}    
+
+.offer-img{
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 160px;
+    width: 200px;
+}    
+
+a.offer{
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 500px;
+    font-size: 19px;
+    color: #145371;
+}    
+
+.price{
+    position: relative;
+    left: 86%;
+    padding-right: 50px;
+    margin-top: -170px;
+    font-size: 22px;
+    color: #145371;
+}
+
+.big-offer-date{
+    position: relative;
+    left: 48%;
+    top: -10px;
+    font-size: 17px;
+    color: #145371;
+    font-weight: 300;
+}
+
+.offer-date{
+    position: relative;
+    left: 27%;
+    top: 50%;
+    font-size: 17px;
+    color: #145371;
+    font-weight: 300;
+}
+
+.big-img-offer{
+    border: 5px solid #117a8b;
+    max-height: 400px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}    
+
+a.big-offer{
+    text-align: center;
+}
+
+.big-offer{
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-bottom: 4%;
+    display: block;
+    width: 620px;
+    font-size: 25px;
+    color: #145371;
+}     
+
+.big-price{
+    position: absolute;
+    text-align: center;
+    border-radius: 50px;
+    margin-left: 680px;
+    font-weight: 800;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+    font-size: 29px;
+    background-color: #345e72;
+    color: #e8e8e8;
+}    
+
+.offer-details{
+    display: table;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.details{
+    display: inline;
+    margin-right: 10px;
+    background-color: rgb(81 158 178 / 49%);
+    border: 5px solid #345e72;
+    border-radius: 20px;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #345e72;
+}
+
+.description{
+    border: 2px solid #345e72;
+    background-color: rgb(81 158 178 / 49%);
+    padding: 20px;
+}
+
+output.description{
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: #345e72;
+}
+
+.l-description{
+    position: static; 
+    margin-left: 2%;
+    font-size: 25px;
+    color: #145371;
+}
