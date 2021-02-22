@@ -631,3 +631,17 @@ output.description{
     font-size: 25px;
     color: #145371;
 }
+
+.offers-com{
+   padding-left: 120px !important;
+   padding-top: 20px !important;
+}
+
+.offers-left{
+    margin-left: -15px;
+}
+
+.left
+{
+    margin-left: 80% !important;
+}
