@@ -162,7 +162,7 @@ a.reg{
 .list-navigation{
     display: flex;
     text-align: center;
-    margin-left: 60%;
+    margin-left: 50%;
     list-style: none;
     padding: 0;
 
@@ -644,4 +644,47 @@ output.description{
 .left
 {
     margin-left: 80% !important;
+}
+
+lable.slack{
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 30px;
+    margin-left: 40%;
+    color: #545fb1;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 75px;
+}  
+
+.slack-form{
+    background-color: #545fb1;
+    margin: auto;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 900px;
+    padding: 20px;
+}  
+
+.send-slack{
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width: 200px;
+}
+
+textarea.sms-to-slack{
+    width: 150%;
+    margin-top: 12px;
+    height: 200px;
+    overflow: hidden;
+    padding: 8px;
+    padding-left: 10px;
+    outline: none;
 }
