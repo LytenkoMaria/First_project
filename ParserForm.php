@@ -69,8 +69,30 @@ $count=0;
 		        $stmt->bindParam(':link', $p);
 		        $stmt->execute();
 
-echo json_encode($last_date_bd);
-//echo json_encode(array( "price" => $price, "images_url" => $images_url,  "advertisements_name" => $advertisements_name, "date" => $date, "link" => $p ,"last_date_bd" => $last_date_bd)); 
+
+				$stm2 = $conn->prepare("SELECT webhook FROM users WHERE  webhook IS NOT NULL ");
+				 $stm2->execute();
+
+				  while($row2 = $stm2->fetch(PDO::FETCH_ASSOC))
+				    {                                                       
+				      $webhook = $row2["webhook"];
+				       $message = "$advertisements_name 
+				       Выставлено $date ,
+				       Вид топлива: $type_of_fuel,
+				       Год выпуска: $year
+				       $p";   
+				       $msg = array('text' => $message);
+				       $c = curl_init($webhook);
+					    curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+					    curl_setopt($c, CURLOPT_SSL_VERIFYPEER, false);
+					    curl_setopt($c, CURLOPT_POST, true);
+					    curl_setopt($c, CURLOPT_POSTFIELDS, array('payload' => json_encode($msg)));
+					    curl_exec($c);
+					    curl_close($c);          
+				    }
+
+
+echo json_encode(array( "price" => $price, "images_url" => $images_url,  "advertisements_name" => $advertisements_name, "date" => $date, "link" => $p ,"last_date_bd" => $last_date_bd)); 
    }
  }
 

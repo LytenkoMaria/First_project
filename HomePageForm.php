@@ -20,13 +20,14 @@ $_SESSION["image"]=$row["picture"];
 $path_avatar ='./resources/images/usersImg/'.$_FILES['picture']['name'];
 
 if(!empty($_POST)) {
-$stm = $conn->prepare("UPDATE users SET email=:email, name=:name, surname=:surname, phone=:phone, date=:date WHERE id=:id");
+$stm = $conn->prepare("UPDATE users SET email=:email, name=:name, surname=:surname, phone=:phone, date=:date, webhook=:webhook WHERE id=:id");
     $stm->bindParam(':email', $_POST["email"]);
     $stm->bindParam(':id', $id);
     $stm->bindParam(':name', $_POST["name"]);
     $stm->bindParam(':surname', $_POST["surname"]);
     $stm->bindParam(':date', $_POST["date"]);
     $stm->bindParam(':phone', $_POST["tel"]);
+    $stm->bindParam(':webhook', $_POST["webhook"]);
     $stm->execute();
     header("Location:/HomePage.php"); 
 

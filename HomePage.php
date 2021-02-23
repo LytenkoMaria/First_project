@@ -41,6 +41,8 @@ require('Menu.php');
                                            value="<?php echo $_SESSION["date-user"]["phone"]?>">
                                            <input required type="date" class=" mt-4 form-control " name="date" 
                                            value="<?php echo $_SESSION["date-user"]["date"]?>">
+                                           <input required type="text" class=" mt-4 form-control " name="webhook" placeholder="Webhook" 
+                                           value="<?php echo $_SESSION["date-user"]["webhook"]?>">
 
                                             <button  type="submit" name="submit" class=" save-change btn btn-primary"><strong>Save changes</strong></button>
                                         </div>

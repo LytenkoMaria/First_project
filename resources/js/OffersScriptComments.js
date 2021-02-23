@@ -76,7 +76,8 @@ $(document).on("submit",".create-reply-comments", function(r) {
             $('.child_comments[data-id="'+ result.id_parent_comments +'"]').append("<div class='child_comments' data-id='"+result.id+"'></div>"); 
 
          $('.reply-comments[data-id="'+ data_id +'"]').html("<form method='post' class='create-reply-comments reply-comments' data-id='"+ data_id +"'></form>"); 
-                          console.log(result); },
+                         // console.log(result);
+                           },
         })
       });
 
